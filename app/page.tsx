@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Script from "next/script";
 import styles from "./portfolio.module.css";
 import { SocialLinks } from "./socials";
 
 export const metadata: Metadata = {
-  title: "Bradford Allen Rodgers-Farmer | Principal Software Engineer",
+  title: "Bradford Allen Rodgers-Farmer | Senior Software Engineer",
   description:
-    "Portfolio of Bradford Allen Rodgers-Farmer, Principal Software Engineer specializing in Next.js, cloud architecture, PCI-compliant checkout systems, and AI-powered tools.",
+    "Portfolio of Bradford Allen Rodgers-Farmer, Senior Software Engineer at PEI, specializing in Next.js, cloud architecture, PCI-compliant checkout systems, and AI-powered tools.",
 };
 
 const PERSON_SCHEMA = {
@@ -16,8 +15,8 @@ const PERSON_SCHEMA = {
   name: "Bradford Allen Rodgers-Farmer",
   url: "https://bradfordrodgersfarmer.us",
   image: "https://bradfordrodgersfarmer.us/headshot.png",
-  jobTitle: "Principal Software Engineer",
-  worksFor: { "@type": "Organization", name: "The Muse" },
+  jobTitle: "Senior Software Engineer",
+  worksFor: { "@type": "Organization", name: "PEI" },
   alumniOf: { "@type": "CollegeOrUniversity", name: "Rutgers University" },
   email: "mailto:bradfordrodgersfarmer@gmail.com",
   sameAs: [
@@ -97,36 +96,43 @@ const SKILLS = [
 
 const EXPERIENCE = [
   {
-    title: "Principal Software Engineer",
-    company: "The Muse (formerly Fairygodboss)",
-    period: "May 2020 to Present",
+    title: "Senior Software Engineer",
+    company: "PEI",
+    period: "Sep 2026 to Present",
+    bullets: ["Full-time, hybrid role based in New York"],
+  },
+  {
+    title: "Technical Engineering Manager",
+    company: "Fortune",
+    period: "Nov 2024 to Present",
     bullets: [
-      "Lead development of new features and products, choosing the technologies that run the company effectively",
+      "Promoted from Technical Lead (Mar 2025) after joining as Senior Software Engineering Consultant (Nov 2024)",
+      "Helping the Fortune Media team modernize with best engineering and development practices",
+      "Improving the core web product and ad product to lift customer acquisition and retention",
+    ],
+  },
+  {
+    title: "Principal Software Engineer",
+    company: "Fairygodboss",
+    period: "May 2021 to May 2024",
+    bullets: [
+      "Led development of new features and products, choosing the technologies that run the company effectively",
       "Migrated article and jobs pages to Next.js, improving page speed by 80 percent",
       "Saved the company $150K per year through cloud service consolidation",
       "Rebuilt email services for deeper personalization and better user retention",
-      "Mentor junior developers and lead engineering hiring",
+      "Mentored junior developers and led engineering hiring",
     ],
   },
   {
     title: "Principal Software Engineer",
     company: "Shoppable",
-    period: "2015 to May 2020",
+    period: "Dec 2015 to May 2021",
     bullets: [
+      "Joined as Lead Software Developer (Dec 2015), promoted to Principal Software Engineer (Nov 2016)",
       "Designed and built Shoppable Video, a product later sold to Unilever and GSK",
       "Architected microservices powering PCI-compliant checkout flows",
       "Integrated retailer APIs from Walmart, Target, and Ulta into the checkout experience",
       "Worked directly with the CEO on business and technical direction",
-    ],
-  },
-  {
-    title: "Lead Mobile Developer",
-    company: "Propeller Communications",
-    period: "2011 to 2014",
-    bullets: [
-      "Built specialized iPad sales applications for Johnson and Johnson sales teams",
-      "Turned client requests into shipped product features",
-      "Created documentation for smooth handoffs to business partners",
     ],
   },
 ];
@@ -134,7 +140,6 @@ const EXPERIENCE = [
 export default function Page() {
   return (
     <div className={styles.page}>
-      <Script src="https://www.tiktok.com/embed.js" strategy="beforeInteractive" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_SCHEMA) }}
@@ -164,7 +169,7 @@ export default function Page() {
             </div>
           </div>
           <div>
-            <span className={styles.eyebrow}>Principal Software Engineer</span>
+            <span className={styles.eyebrow}>Senior Software Engineer</span>
             <h1>
               Bradford Allen <span className={styles.gradient}>Rodgers-Farmer</span>
             </h1>
@@ -204,7 +209,7 @@ export default function Page() {
           </div>
           <div className={styles.stat}>
             <div className={styles.statNum}>80%</div>
-            <div className={styles.statLabel}>Page-speed improvement at The Muse</div>
+            <div className={styles.statLabel}>Page-speed improvement at Fairygodboss</div>
           </div>
           <div className={styles.stat}>
             <div className={styles.statNum}>PCI</div>
@@ -295,34 +300,23 @@ export default function Page() {
               build. Follow along at <strong>@truebelvira</strong>.
             </p>
           </div>
-          <div className={styles.tiktok}>
-            <div className={styles.tiktokCopy}>
-              <p>
-                Short videos on engineering craft, AI experiments, and behind the
-                scenes of projects like crawlers.cc and the Cortex AI NPC
-                Generator. New videos drop regularly.
-              </p>
-              <div className={styles.ctaRow}>
-                <a
-                  className={`${styles.btn} ${styles.btnPrimary}`}
-                  href="https://www.tiktok.com/@truebelvira"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Follow @truebelvira
-                </a>
-              </div>
-              <SocialLinks compact />
+          <div className={styles.tiktokCopy}>
+            <p>
+              Short videos on engineering craft, AI experiments, and behind the
+              scenes of projects like crawlers.cc and the Cortex AI NPC
+              Generator. New videos drop regularly.
+            </p>
+            <div className={styles.ctaRow}>
+              <a
+                className={`${styles.btn} ${styles.btnPrimary}`}
+                href="https://www.tiktok.com/@truebelvira"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Follow @truebelvira
+              </a>
             </div>
-            <div className={styles.embedBox}>
-              <iframe
-                src="https://www.tiktok.com/embed/7349690896402763038"
-                style={{ maxWidth: "605px", minWidth: "305px", height: "600px" }}
-                allowFullScreen
-                allow="encrypted-media;"
-                title="TikTok video by @truebelvira"
-              />
-            </div>
+            <SocialLinks compact />
           </div>
         </section>
 
